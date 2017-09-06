@@ -15,6 +15,9 @@
 		0A8821BF1F5B5423004F78C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A8821BE1F5B5423004F78C5 /* Assets.xcassets */; };
 		0A8821C21F5B5423004F78C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8821C01F5B5423004F78C5 /* LaunchScreen.storyboard */; };
 		0A8821CD1F5B5423004F78C5 /* WeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8821CC1F5B5423004F78C5 /* WeatherTests.m */; };
+		0A8821D91F5B5FB3004F78C5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8821D81F5B5FB3004F78C5 /* CoreLocation.framework */; };
+		0A8821DC1F5CCA45004F78C5 /* OpenWeatherMapAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8821DB1F5CCA45004F78C5 /* OpenWeatherMapAPI.m */; };
+		0A8821E01F5F084B004F78C5 /* WeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8821DF1F5F084B004F78C5 /* WeatherData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,12 @@
 		0A8821C81F5B5423004F78C5 /* WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8821CC1F5B5423004F78C5 /* WeatherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherTests.m; sourceTree = "<group>"; };
 		0A8821CE1F5B5423004F78C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A8821D81F5B5FB3004F78C5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0A8821DA1F5CCA45004F78C5 /* OpenWeatherMapAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenWeatherMapAPI.h; sourceTree = "<group>"; };
+		0A8821DB1F5CCA45004F78C5 /* OpenWeatherMapAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenWeatherMapAPI.m; sourceTree = "<group>"; };
+		0A8821DD1F5CE033004F78C5 /* Keys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Keys.h; sourceTree = "<group>"; };
+		0A8821DE1F5F084B004F78C5 /* WeatherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherData.h; sourceTree = "<group>"; };
+		0A8821DF1F5F084B004F78C5 /* WeatherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8821D91F5B5FB3004F78C5 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +78,7 @@
 				0A8821AE1F5B5423004F78C5 /* Weather */,
 				0A8821CB1F5B5423004F78C5 /* WeatherTests */,
 				0A8821AD1F5B5423004F78C5 /* Products */,
+				0A8821D71F5B5FB3004F78C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +104,11 @@
 				0A8821C31F5B5423004F78C5 /* Info.plist */,
 				0A8821BB1F5B5423004F78C5 /* Weather.xcdatamodeld */,
 				0A8821AF1F5B5423004F78C5 /* Supporting Files */,
+				0A8821DA1F5CCA45004F78C5 /* OpenWeatherMapAPI.h */,
+				0A8821DB1F5CCA45004F78C5 /* OpenWeatherMapAPI.m */,
+				0A8821DD1F5CE033004F78C5 /* Keys.h */,
+				0A8821DE1F5F084B004F78C5 /* WeatherData.h */,
+				0A8821DF1F5F084B004F78C5 /* WeatherData.m */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -112,6 +128,14 @@
 				0A8821CE1F5B5423004F78C5 /* Info.plist */,
 			);
 			path = WeatherTests;
+			sourceTree = "<group>";
+		};
+		0A8821D71F5B5FB3004F78C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A8821D81F5B5FB3004F78C5 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +243,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8821BD1F5B5423004F78C5 /* Weather.xcdatamodeld in Sources */,
+				0A8821DC1F5CCA45004F78C5 /* OpenWeatherMapAPI.m in Sources */,
 				0A8821B71F5B5423004F78C5 /* ViewController.m in Sources */,
 				0A8821B41F5B5423004F78C5 /* AppDelegate.m in Sources */,
+				0A8821E01F5F084B004F78C5 /* WeatherData.m in Sources */,
 				0A8821B11F5B5423004F78C5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
